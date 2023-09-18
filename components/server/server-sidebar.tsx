@@ -9,7 +9,7 @@ interface ServerSidebarProps {
   serverId: string;
 }
 
-const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
+export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
   const profile = await currentProfile();
 
   if (!profile) {
@@ -64,5 +64,3 @@ const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
     </div>
   );
 };
-
-export default ServerSidebar;

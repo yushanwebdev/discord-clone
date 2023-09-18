@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
-import ServerSidebar from "@/components/server/server-sidebar";
+import { ServerSidebar } from "@/components/server/server-sidebar";
 
 const ServerIdLayout = async ({
   children,
