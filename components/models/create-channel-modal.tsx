@@ -66,7 +66,6 @@ export const CreateChannelModal = () => {
   const isLoading = form.formState.isSubmitting;
 
   const handleClose = () => {
-    form.reset();
     onClose();
   };
 

@@ -65,7 +65,6 @@ export const EditChannelModal = () => {
   const isLoading = form.formState.isSubmitting;
 
   const handleClose = () => {
-    form.reset();
     onClose();
   };
 
@@ -79,7 +78,6 @@ export const EditChannelModal = () => {
       });
       await axios.patch(url, values);
 
-      form.reset();
       router.refresh();
       onClose();
     } catch (error) {
@@ -88,6 +86,7 @@ export const EditChannelModal = () => {
   };
 
   useEffect(() => {
+    form.reset();
     if (channel) {
       form.setValue("name", channel.name);
       form.setValue("type", channel.type);
