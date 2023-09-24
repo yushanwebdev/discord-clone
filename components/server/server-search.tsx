@@ -52,7 +52,6 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      debugger;
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
